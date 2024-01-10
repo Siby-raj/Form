@@ -1,0 +1,149 @@
+/* body{
+  background-color:ghostwhite;
+}
+
+.container {
+background-color: white; 
+padding: 10px;
+border-radius: 10px;
+margin-top: 20px;
+}  */
+/* header{
+  justify-content: center;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.btn{
+  background-color:#040507;
+
+}
+
+.btn-primary:hover {
+background-color: #0069d9; 
+}
+#resultContainer {
+  margin-top: 20px;
+  padding: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  
+  color: black;
+} */
+/* task.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Form Styles */
+header {
+  border-bottom: 2px solid #fff;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input[type='text'],
+form input[type='email'],
+form input[type='tel'],
+form input[type='number'],
+form select,
+form input[type='password'],
+form input[type='file'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease-in-out;
+}
+
+form input[type='text']:focus,
+form input[type='email']:focus,
+form input[type='tel']:focus,
+form input[type='number']:focus,
+form select:focus,
+form input[type='password']:focus,
+form input[type='file']:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: dodgerblue;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: #009688;
+}
+
+/* Error Message Styles */
+span[id$='Error'] {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+}
+/* span[id$='Error']:not(:empty) + input {
+  border-color: red;
+}
+
+input:not(:focus):not(:invalid) {
+  border-color: green;
+} */
+
+/* Search Styles */
+#search-filter {
+  margin-top: 50px;
+}
+
+#search {
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease-in-out;
+ 
+}
+
+#search:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
+
+.result-container {
+ 
+  margin-top: 20px;
+  padding: 20px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  color: black;
+}
+

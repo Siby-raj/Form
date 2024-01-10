@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="task.css">
+  <title>User Registration Form</title>
+  <script src="task.js"></script>
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-4">
+    <h1>User Registration Form</h1>
+  </header>
+<div class="container mt-5">
+  <form class="row g-3 " onsubmit="checkErrorsBeforeSubmit() ">
+    
+      <div class="form-group col-md-4">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required oninput="validateName()">
+        
+        <span id="nameError"  style="color: red;"></span>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required oninput="validateMail()">
+        <span id="emailError" style="color: red;"></span></span>
+      </div>
+   
+   
+      <div class="form-group col-md-4">
+        <label for="dob">Date of Birth</label>
+        <input type="date" class="form-control" id="dob" required oninput=" validateDate()" onchange="calculateAge() ">
+        <span id="dateError" style="color: red;"></span></span>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter your age" readonly>
+      </div>
+      
+    
+    
+        <div class="form-group col-md-4">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required oninput="validatePhone()">
+            <span id="noError" style="color: red;"></span></span>
+          </div>
+      <div class="form-group col-md-4">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      
+    
+  
+        <div class="form-group col-md-4">
+            <label for="occupation">Occupation</label>
+            <input type="text" class="form-control" id="occupation" placeholder="Enter your occupation">
+          </div>
+      <div class="form-group col-md-4">
+        <label for="education">Education</label>
+        <select class="form-control" id="education" required>
+          <option value="high-school">High School</option>
+          <option value="associate-degree">Associate Degree</option>
+          <option value="bachelors-degree">Bachelor's Degree</option>
+          <option value="masters-degree">Master's Degree</option>
+          <option value="doctorate">Doctorate</option>
+       
+        </select>
+      </div>
+     
+  
+    
+    <div class="form-group col-md-4">
+            <label for="userId">User ID</label>
+            <input type="text" class="form-control" id="userId" placeholder="Enter your user ID" required oninput="validateUserName()">
+            <span id="usernameError" style="color: red;"></span></span>
+          </div>
+          <div class="form-group col-md-4">
+            <label class="form-label">Password:</label>
+            <div class="input-group">
+                <input type="password" id="password" class="form-control required" name="password" oninput="validatePassword()">
+                <div class="input-group-append">
+                    <span class="input-group-text toggle-password" onclick="togglePasswordVisibility()">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+            </div>
+            <div  id="passwordError"></div><br>
+        </div>
+     
+        <div class="form-group col-md-4">
+            <label for="pan">Pan Number</label>
+            <input type="text" class="form-control" id="pan" placeholder="Enter your user ID" required oninput="validatePan() ">
+            <span id="panError" style="color: red;"></span></span>
+          </div>
+      <div class="form-group col-md-4">
+        <label for="profilePhoto">Profile Photo</label>
+        <input type="file" class="form-control-file" id="profilePhoto" accept="image/*" required oninput=" validateImage()">
+        <span id="fileInfo" style="color: red;"></span></span>
+      </div>
+      <div class="col-12">
+    <button type="submit" class="btn btn-primary" >Submit</button>
+    </div>
+  </form>
+</div>
+<div class="container" id="search-filter">
+    <label for="search">Search:</label>
+    <input type="text" id="search" class="form-control" placeholder="Enter search keywords" oninput="searchData()" >
+  
+    <div id="resultContainer" class="result-container ">
+    
+
+  </div>
+<!-- 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>
